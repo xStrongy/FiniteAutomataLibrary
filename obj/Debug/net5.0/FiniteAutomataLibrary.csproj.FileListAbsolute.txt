@@ -1,0 +1,12 @@
+C:\Users\Strongy\source\repos\FiniteAutomata\FiniteAutomataLibrary\bin\Debug\net5.0\FiniteAutomataLibrary.deps.json
+C:\Users\Strongy\source\repos\FiniteAutomata\FiniteAutomataLibrary\bin\Debug\net5.0\FiniteAutomataLibrary.dll
+C:\Users\Strongy\source\repos\FiniteAutomata\FiniteAutomataLibrary\bin\Debug\net5.0\ref\FiniteAutomataLibrary.dll
+C:\Users\Strongy\source\repos\FiniteAutomata\FiniteAutomataLibrary\bin\Debug\net5.0\FiniteAutomataLibrary.pdb
+C:\Users\Strongy\source\repos\FiniteAutomata\FiniteAutomataLibrary\obj\Debug\net5.0\FiniteAutomataLibrary.csprojAssemblyReference.cache
+C:\Users\Strongy\source\repos\FiniteAutomata\FiniteAutomataLibrary\obj\Debug\net5.0\FiniteAutomataLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Strongy\source\repos\FiniteAutomata\FiniteAutomataLibrary\obj\Debug\net5.0\FiniteAutomataLibrary.AssemblyInfoInputs.cache
+C:\Users\Strongy\source\repos\FiniteAutomata\FiniteAutomataLibrary\obj\Debug\net5.0\FiniteAutomataLibrary.AssemblyInfo.cs
+C:\Users\Strongy\source\repos\FiniteAutomata\FiniteAutomataLibrary\obj\Debug\net5.0\FiniteAutomataLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Strongy\source\repos\FiniteAutomata\FiniteAutomataLibrary\obj\Debug\net5.0\FiniteAutomataLibrary.dll
+C:\Users\Strongy\source\repos\FiniteAutomata\FiniteAutomataLibrary\obj\Debug\net5.0\ref\FiniteAutomataLibrary.dll
+C:\Users\Strongy\source\repos\FiniteAutomata\FiniteAutomataLibrary\obj\Debug\net5.0\FiniteAutomataLibrary.pdb
