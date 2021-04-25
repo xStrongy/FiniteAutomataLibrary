@@ -92,6 +92,12 @@ namespace FiniteAutomataLibrary
                 return NFA2;
             }
 
+            if(RegularExpression.Equals("ε"))
+            {
+                NondeterministicFiniteAutomaton NFA3 = EpsilonAutomaton();
+                return NFA3;
+            }
+
             RegularExpressionParser rep = new RegularExpressionParser(RegularExpression);
             TreeNode root = rep.toParseTree();
 
@@ -758,5 +764,19 @@ namespace FiniteAutomataLibrary
             return new NondeterministicFiniteAutomaton(states, Alphabet, triplets, Epsilons);
         }
 
+
+        private NondeterministicFiniteAutomaton EpsilonAutomaton()
+        {
+            List<State> states = new List<State>();
+            List<DeltaFunctionTriplet> triplets = new List<DeltaFunctionTriplet>();
+            SortedList<int, List<int>> Epsilons = new SortedList<int, List<int>>();
+
+            State start = new State(1, "q1", true, false);
+            State end = new State(2, "q2", false, true);
+
+            Epsilons.Add(1, new List<int> { 2 });
+
+            return new NondeterministicFiniteAutomaton(states, Alphabet, triplets, Epsilons);
+        }
     }
 }
