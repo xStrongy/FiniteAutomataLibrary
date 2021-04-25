@@ -953,7 +953,7 @@ namespace FiniteAutomataLibrary
                 return false;
             }
 
-            if (Alphabet.Trim().Equals(""))
+            if (Alphabet.Replace(" ", "").Equals(""))
             {
                 return false;
             }
