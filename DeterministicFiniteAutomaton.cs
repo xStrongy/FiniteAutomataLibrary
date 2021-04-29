@@ -13,7 +13,7 @@ namespace FiniteAutomataLibrary
 
         protected int InitialStateId;
 
-        public DeterministicFiniteAutomaton(IEnumerable<State> States, string Alphabet, IEnumerable<DeltaFunctionTriplet> Triplets)
+        internal DeterministicFiniteAutomaton(IEnumerable<State> States, string Alphabet, IEnumerable<DeltaFunctionTriplet> Triplets)
             : base(States, Alphabet)
         {
             foreach (DeltaFunctionTriplet dft in Triplets)
@@ -38,7 +38,10 @@ namespace FiniteAutomataLibrary
                 }
             }
         }
-
+        /// <summary>
+        /// Saves automaton into XML file
+        /// </summary>
+        /// <param name="xmlPath">A system path, where final XML file will be saved</param>
         public void Save2Xml(string xmlPath)
         {
             XmlWriterSettings settings = new XmlWriterSettings();
@@ -75,7 +78,11 @@ namespace FiniteAutomataLibrary
             Writer.WriteEndDocument();
             Writer.Close();
         }
-
+        /// <summary>
+        /// loads an automaton from XML file
+        /// </summary>
+        /// <param name="xmlPath">A system path, from where the folder will be loaded</param>
+        /// <returns></returns>
         public static DeterministicFiniteAutomaton LoadFromXML(string xmlPath)
         {
             StreamReader xmlStreamReader = new StreamReader(xmlPath);
@@ -116,6 +123,11 @@ namespace FiniteAutomataLibrary
 
             return new DeterministicFiniteAutomaton(states, Alphabet, dft);
         }
+        /// <summary>
+        /// Determinates if the automaton accepts given word
+        /// </summary>
+        /// <param name="input">A word from alphabet</param>
+        /// <returns>returns true if the automaton accepts the word</returns>
         public bool Accepts(string input)
         {
 
@@ -127,7 +139,9 @@ namespace FiniteAutomataLibrary
 
             return AcceptStates.Any(x => x.Id == currenentStateId);
         }
-
+        /// <summary>
+        /// Delete equivalent states from automaton
+        /// </summary>
         public void DeleteEquivalentStates()
         {
             Dictionary<int, List<int>> GroupRecorder = new Dictionary<int, List<int>>();
@@ -345,7 +359,10 @@ namespace FiniteAutomataLibrary
                 GroupRecorder[GroupRecorder.Count] = NewStates;
             }
         }
-
+        /// <summary>
+        /// Returns a string which can be used for GraphViz
+        /// </summary>
+        /// <returns>A string to generate an automaton in GraphViz</returns>
         public string GetDotSourceCode()
         {
             StringBuilder sb = new StringBuilder();

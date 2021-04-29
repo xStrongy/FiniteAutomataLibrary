@@ -297,7 +297,9 @@ namespace FiniteAutomataLibrary
             DeleteUnnecessaryStates();
 
         }
-
+        /// <summary>
+        /// Deletes epsilon transitions from automaton
+        /// </summary>
         public void DeleteEpsilonTransitions()
         {
             Dictionary<int, List<int>> EpsilonSeals = new Dictionary<int, List<int>>();

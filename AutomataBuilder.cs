@@ -8,6 +8,11 @@ namespace FiniteAutomataLibrary
     {
         private string Alphabet;
 
+        /// <summary>
+        /// Builds an automaton from derivation of regular expression
+        /// </summary>
+        /// <param name="words">a set of words, which are used for building</param>
+        /// <returns>New instance of nondeterministic finite automaton</returns>
         public NondeterministicFiniteAutomaton BuildAutomatonFronDerivationOfRegularExpression(HashSet<string> words)
         {
             List<State> states = new List<State>();
@@ -80,6 +85,13 @@ namespace FiniteAutomataLibrary
 
             return new NondeterministicFiniteAutomaton(states, Alphabet, triplets, Epsilons);
         }
+
+        /// <summary>
+        /// builds an automaton from regular expression
+        /// </summary>
+        /// <param name="RegularExpression">regular expression</param>
+        /// <param name="Alphabet">alphabet</param>
+        /// <returns>new instance of nondeterministic finite automaton</returns>
         public NondeterministicFiniteAutomaton BuildAutomatonFromRegularExpression(
             string RegularExpression, string Alphabet)
         {
@@ -105,6 +117,12 @@ namespace FiniteAutomataLibrary
 
             return NFA;
         }
+
+        /// <summary>
+        /// builds an automaton from regular grammar
+        /// </summary>
+        /// <param name="RegularGrammar">a list of rules of regular grammar</param>
+        /// <returns>new instance of nondeterministic finite automaton</returns>
         public NondeterministicFiniteAutomaton BuildAutomatonFromRegularGrammar(List<string> RegularGrammar)
         {
             List<string> Nonterminals = new List<string>();

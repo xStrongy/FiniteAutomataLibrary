@@ -17,7 +17,7 @@ namespace FiniteAutomataLibrary
             this.position = 0;
         }
 
-        public TreeNode toParseTree()
+        internal TreeNode toParseTree()
         {
             return Expression();
         }
